@@ -58,7 +58,7 @@ function edit_table($arr,$arr2){
 	<h3 align="center"><a href="index.php">Go to Home Page</a></h3>
 	<?
 	$sql="SELECT * FROM add_visit WHERE patient_id='$id'";
-	$link=mysqli_connect("localhost","root","","patients")
+	$link=mysqli_connect("localhost","root","","patients")//здесь вставьте свои реквизиты!!(1 - хост. 2 - юзер. 3 - пароль. 4- название БД)
 	or die(mysqli_error($link));
 	$query2=mysqli_query($link,$sql) or die(mysqli_error($link));
 	$arr2=array();
@@ -71,7 +71,7 @@ mysqli_close($link);
 function buttons(){
 //действие при нажатии на 'delete'
 	if(isset($_GET['delete'])){
-		$link=mysqli_connect("localhost","root","","patients")
+		$link=mysqli_connect("","","","patients")//здесь вставьте свои реквизиты!!(1 - хост. 2 - юзер. 3 - пароль. 4- название БД) 
 		or die(mysqli_error($link));
 		$name=$_GET['name'];
 		$lastname=$_GET['lastname'];
@@ -95,7 +95,7 @@ function buttons(){
 		header("location:registry.php?id=".$_GET['id']);
 //действие, при нажатии на "add"
 }elseif(isset($_POST['add'])){
-	$link=mysqli_connect("localhost","root","","patients")
+	$link=mysqli_connect("localhost","root","","patients")//здесь вставьте свои реквизиты!!(1 - хост. 2 - юзер. 3 - пароль. 4- название БД)
 	or die(mysqli_error($link));
 	$date=date("d-m-Y");
 	$oa=$_POST['order_amount'];
@@ -127,7 +127,7 @@ function buttons(){
 	header("location:registry.php?id=".$_POST['id']);
 //действие, при нажатии на "update"
 }elseif(isset($_GET['update'])){
-	$link=mysqli_connect("localhost","root","","patients")
+	$link=mysqli_connect("localhost","root","","patients")//здесь вставьте свои реквизиты!!(1 - хост. 2 - юзер. 3 - пароль. 4- название БД)
 	or die(mysqli_error($link));
 	$id = $_GET['id'];
 	$upd =$_GET['update'];
