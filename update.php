@@ -1,6 +1,6 @@
 <?php
 //изменение информации о визите
-$link=mysqli_connect("localhost","root","","patients")
+$link=mysqli_connect("localhost","root","","patients")//здесь вставьте свои реквизиты!!(1 - хост. 2 - юзер. 3 - пароль. 4- название БД)
 or die(mysqli_error($link));
 $oa=(int)$_POST["order_amount_update"];
 $os=$_POST["order_status_update"];
