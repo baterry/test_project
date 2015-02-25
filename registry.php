@@ -1,6 +1,6 @@
 <?php
 //подключение к БД
-$link=mysqli_connect("localhost","root","","patients") or die(mysqli_error($link));
+$link=mysqli_connect("localhost","root","","patients") or die(mysqli_error($link));//здесь вставьте свои реквизиты!!(1 - хост. 2 - юзер. 3 - пароль. 4- название БД)
 //проверка на "правильность" перехода на страницу
 if(isset($_POST['submit']) or isset($_POST['registry_submit'])
 or isset($_POST['add']) or isset($_POST['register'])
